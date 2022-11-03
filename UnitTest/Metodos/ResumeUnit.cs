@@ -40,8 +40,9 @@ namespace Metodos.UnitTest.Metodos
             getResumeRepository.Setup(x => x.GetFirstOrDefault(It.IsAny<Expression<Func<Resume, bool>>>(), It.IsAny<string>()).Result).Returns(ObjectResume);
             var getResumeApplication = new ResumeApplication(getResumeRepository.Object);
 
+            var idResume = 1;
             // Act
-            var response = await getResumeApplication.GetOne();
+            var response = await getResumeApplication.GetOne(idResume);
             getResumeRepository.Verify(x => x.GetFirstOrDefault(It.IsAny<Expression<Func<Resume, bool>>>(), It.IsAny<string>()).Result, Times.Once);
 
             Assert.NotNull(response);

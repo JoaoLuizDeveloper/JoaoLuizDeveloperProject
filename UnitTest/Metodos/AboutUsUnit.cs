@@ -45,9 +45,9 @@ namespace Metodos.UnitTest.Metodos
             var getAboutUsRepository = new Mock<IAboutUsRepository>();
             getAboutUsRepository.Setup(x => x.GetFirstOrDefault(It.IsAny<Expression<Func<AboutUs, bool>>>(), It.IsAny<string>()).Result).Returns(ObjectAboutUs);
             var getAboutUsApplication = new AboutUsApplication(getAboutUsRepository.Object);
-
+            var idaboutUs = 1;
             // Act
-            var response = await getAboutUsApplication.GetOne();
+            var response = await getAboutUsApplication.GetOne(idaboutUs);
             getAboutUsRepository.Verify(x => x.GetFirstOrDefault(It.IsAny<Expression<Func<AboutUs, bool>>>(), It.IsAny<string>()).Result, Times.Once);
             
             Assert.NotNull(response);
