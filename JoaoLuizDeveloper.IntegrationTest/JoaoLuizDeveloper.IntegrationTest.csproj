@@ -30,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WebAPI\JoaoLuizDeveloper.WebAPI.csproj" />
+    <ProjectReference Include="..\JoaoLuizDeveloper.WebAPI\JoaoLuizDeveloper.WebAPI.csproj" />
   </ItemGroup>
 
 </Project>

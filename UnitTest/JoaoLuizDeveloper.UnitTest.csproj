@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\JoaoLuizDeveloper.Application\JoaoLuizDeveloper.Application.csproj" />
-    <ProjectReference Include="..\..\JoaoLuizDeveloper.Domain\JoaoLuizDeveloper.Domain.csproj" />
+    <ProjectReference Include="..\JoaoLuizDeveloper.Application\JoaoLuizDeveloper.Application.csproj" />
+    <ProjectReference Include="..\JoaoLuizDeveloper.Domain\JoaoLuizDeveloper.Domain.csproj" />
   </ItemGroup>
 
 </Project>
