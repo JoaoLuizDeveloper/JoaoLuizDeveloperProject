@@ -1,0 +1,83 @@
+/* DESENVOLVIMENTO DO PROJETO PESSOAL */
+
+		/* Utilização de duas camadas de abstração Repositorios para Conectar ao banco de dados e Application para as regras de Negocio.
+		/* Entidades, Enums, ViewModels, Dentro de Dominio
+		/* DataBaseContext, AzureServices Dentro de Infraestructure
+		
+
+		/* Campos presentes em todas as tabelas Id, DT_Insert, DT_Update Null, User_Insert Null,  Null
+
+        /* PEDIDO - ITEM PEDIDO - NewsLetter */
+
+        /*
+            Um item de uma newsletter representa uma noticia ou artigo do blog que devera conter ao menos um titulo:
+                Possuir: Titulo, Descrição em HTML e possibilidade de adicionar videos e imagens, Imagem Principal, Campo string para url da noticia
+
+            1 - Adicionar Item                
+                1.1 - Campo Titulo pode ter no maximo 100 Caracteres. 
+                1.2 - Campo Descrição pode ter até 10000 caracteres.
+                1.3 - Campo Imagem ira ser salva dentro de WWWRoot no primeiro momento.
+                1.4 - O titulo não pode estar vazio para ser adicionado pois é obrigatorio.
+				1.5 - Campo de url sera um descritivo do titulo para exibição na url. caracteres em LowerCase sem caracteres especiais e trocando espaços por traços.
+
+            2 - Atualizacao de Item
+                2.1 - O item precisa estar na lista para ser atualizado.
+                2.2 - O titulo não pode estar vazio  para ser atualizado pois é obrigatorio.
+                2.3 - Ao atualizar o titulo a url da noticia tambem deve ser alterada.
+
+            3 - Remoção de Item
+                3.1 - O item precisa estar na lista para ser removido.
+        */
+
+        /* PEDIDO Fale Conosco		
+        
+            Aos visitantes Haverá uma pagina de fale conosco para que ele possa entrar em contato comigo.
+			Eu irei receber essas mensagens no meu email pessoal Joãoluizdeveloper@gmail.com e tambem havera uma pagina administrativa para que eu consiga controlar as mensagens:
+				Possuir: Assunto, Possibilidade de adicionar arquivos como pdf, imagens, Campo Email, Campo Telefone, Campo descritivo.
+            
+			1 - Adicionar Item
+                1.1 Assunto, Email e descrição é obrigatorio.
+                1.2 Campo assunto com no maximo 50 caracteres.
+                1.3 Campo Descrição com até 1000 caracteres.
+                1.4 Campo Telefone opcional.
+                1.5 Adicionar arquivo opcional.
+        
+			2 - Visualizar item pelo Administrativo.
+				1.1 Assunto, Email e descrição é obrigatorio.
+                1.2 Campo assunto com no maximo 50 caracteres.
+				1.3 Controlar status do pedido ou mandar email para usuario.
+				1.4 Pode-se deletar logicamente o Fale Conosco.
+				
+		/* PEDIDO Sobre
+			
+			Haverá uma pagina de sobre para que o visitante possa ver informação pessoais sobre mim.		
+				Possuir: Titulo, Texto em HTML e possibilidade de adicionar imagens.
+		
+			1 - Adicionar Item
+                1.1 Titulo é obrigatorio, texto e imagens são opcionais.
+                1.2 Campo titulo com no maximo 50 caracteres.
+                1.3 Campo texto com até 1000 caracteres.
+        
+			2 - Visualizar item pelo Administrativo.
+				1.1 Detalhes do sobre.
+				1.2 Update Seguindo mesma regra do adicionar
+		 
+		/* PEDIDO Curriculo		
+			
+			Haverá uma pagina do meu curriculo pessoal com informações como escolaridade, experiencias, cursos e informações complementares.
+				Possuir: Titulo, Texto em HTML.
+		
+			1 - Adicionar Item
+                1.1 Titulo, texto são obrigatorios.
+                1.2 Campo titulo com no maximo 50 caracteres.
+                1.3 Campo texto com até 1000 caracteres.
+        
+			2 - Visualizar item pelo Administrativo.
+				1.1 Detalhes do sobre.
+				1.2 Update Seguindo mesma regra do adicionar
+		 
+		/* PEDIDO Home com informações resumidas das outras paginas		
+		
+				Possuir: Campos para controle da pagina como Modo Escuro e estilizações no geral na pagina e nos menus, Tradução
+				
+				
