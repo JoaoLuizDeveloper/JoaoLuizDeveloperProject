@@ -28,10 +28,8 @@ xUnit for testing
 🚀 Getting Started
 Clone the repository:
 
-bash
-Copiar
-Editar
 git clone https://github.com/JoaoLuizDeveloper/JoaoLuizDeveloperProject.git
+<br />
 cd JoaoLuizDeveloperProject
 Set up the database:
 
@@ -41,9 +39,6 @@ Run the application:
 
 Open the solution in Visual Studio and run the desired project (Web or WebAPI). Alternatively, use the .NET CLI:
 
-bash
-Copiar
-Editar
 dotnet build
 dotnet run --project JoaoLuizDeveloper.Web
 The application will be available at http://localhost:5000.
